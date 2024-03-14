@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C63E9CB-01FC-42E8-A9B5-D92D987EE432}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Proyecto.SINAC</RootNamespace>
+    <AssemblyName>Proyecto.SINAC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.802.134-rc\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.802.134-rc\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.802.134-rc\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.802.134-rc\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.802.134-rc\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministradorGuarda\AreaDeConservacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdministradorGuarda\AreaDeConservacion.Designer.cs">
+      <DependentUpon>AreaDeConservacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministradorGuarda\Disponibilidades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdministradorGuarda\Disponibilidades.Designer.cs">
+      <DependentUpon>Disponibilidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministradorGuarda\RegistarUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdministradorGuarda\RegistarUsuarios.Designer.cs">
+      <DependentUpon>RegistarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministradorGuarda\ReporteGraficaBarra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdministradorGuarda\ReporteGraficaBarra.Designer.cs">
+      <DependentUpon>ReporteGraficaBarra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministradorGuarda\ReporteHistoralCompra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdministradorGuarda\ReporteHistoralCompra.Designer.cs">
+      <DependentUpon>ReporteHistoralCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministradorGuarda\ReporteListaVisitantes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdministradorGuarda\ReporteListaVisitantes.Designer.cs">
+      <DependentUpon>ReporteListaVisitantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministradorGuarda\Reportes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdministradorGuarda\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\ReservacionYCompra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cliente\ReservacionYCompra.Designer.cs">
+      <DependentUpon>ReservacionYCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentanaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentanaFactura.Designer.cs">
+      <DependentUpon>FrmVentanaFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Idiomas\ResIniciarSeccion.en-USA.Designer.cs">
+      <DependentUpon>ResIniciarSeccion.en-USA.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Idiomas\ResIniciarSeccion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResIniciarSeccion.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Idiomas\ResOrdenCompra.en-USA.Designer.cs">
+      <DependentUpon>ResOrdenCompra.en-USA.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Idiomas\ResOrdenCompra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResOrdenCompra.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Idiomas\ResRegistrarse.en-USA.Designer.cs">
+      <DependentUpon>ResRegistrarse.en-USA.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Idiomas\ResRegistrarse.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResRegistrarse.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\RegistrarU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\RegistrarU.Designer.cs">
+      <DependentUpon>RegistrarU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\EditarPerfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Principal\EditarPerfil.Designer.cs">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\VentanaDeLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\VentanaDeLogin.Designer.cs">
+      <DependentUpon>VentanaDeLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Principal\RecuperarContrasenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\RecuperarContrasenia.Designer.cs">
+      <DependentUpon>RecuperarContrasenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\VentanaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\VentanaPrincipal.Designer.cs">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SINACDataSeHistorialCompra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SINACDataSeHistorialCompra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SINACDataSetListaVisitantes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SINACDataSetListaVisitantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="AdministradorGuarda\AreaDeConservacion.resx">
+      <DependentUpon>AreaDeConservacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministradorGuarda\Disponibilidades.resx">
+      <DependentUpon>Disponibilidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministradorGuarda\RegistarUsuarios.resx">
+      <DependentUpon>RegistarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministradorGuarda\ReporteGraficaBarra.resx">
+      <DependentUpon>ReporteGraficaBarra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministradorGuarda\ReporteHistoralCompra.resx">
+      <DependentUpon>ReporteHistoralCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministradorGuarda\ReporteListaVisitantes.resx">
+      <DependentUpon>ReporteListaVisitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministradorGuarda\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministradorGuarda\ReportWHistorialCompras.rdlc" />
+    <EmbeddedResource Include="AdministradorGuarda\ReportWListaVisitantes.rdlc" />
+    <EmbeddedResource Include="Cliente\ReservacionYCompra.resx">
+      <DependentUpon>ReservacionYCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentanaFactura.resx">
+      <DependentUpon>FrmVentanaFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idiomas\ResIniciarSeccion.en-USA.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResIniciarSeccion.en-USA.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idiomas\ResIniciarSeccion.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResIniciarSeccion.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idiomas\ResOrdenCompra.en-USA.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResOrdenCompra.en-USA.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idiomas\ResOrdenCompra.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResOrdenCompra.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idiomas\ResRegistrarse.en-USA.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResRegistrarse.en-USA.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idiomas\ResRegistrarse.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResRegistrarse.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\RegistrarU.resx">
+      <DependentUpon>RegistrarU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\EditarPerfil.resx">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\VentanaDeLogin.resx">
+      <DependentUpon>VentanaDeLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Principal\RecuperarContrasenia.resx">
+      <DependentUpon>RecuperarContrasenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\VentanaPrincipal.resx">
+      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SINACDataSeHistorialCompra.xsc">
+      <DependentUpon>SINACDataSeHistorialCompra.xsd</DependentUpon>
+    </None>
+    <None Include="SINACDataSeHistorialCompra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SINACDataSeHistorialCompra.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SINACDataSeHistorialCompra.xss">
+      <DependentUpon>SINACDataSeHistorialCompra.xsd</DependentUpon>
+    </None>
+    <None Include="SINACDataSetListaVisitantes.xsc">
+      <DependentUpon>SINACDataSetListaVisitantes.xsd</DependentUpon>
+    </None>
+    <None Include="SINACDataSetListaVisitantes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SINACDataSetListaVisitantes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SINACDataSetListaVisitantes.xss">
+      <DependentUpon>SINACDataSetListaVisitantes.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BLL\BLL.csproj">
+      <Project>{b9042203-f6e6-4a37-95ca-acba24cb936f}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="Entities\Entities.csproj">
+      <Project>{51d577f3-807f-428f-8ffc-8463257bff0a}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo de SINAC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo de SINAC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comprobado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
